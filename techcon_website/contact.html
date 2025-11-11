@@ -3,20 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us - TechCon 2024</title>
+    <style>
+        .map-container {
+            overflow: hidden;
+            /* Adjust the padding-top to control the map's aspect ratio (e.g., 56.25% for 16:9) */
+            padding-top: 56.25%; 
+            position: relative;
+        }
+        .map-container iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>TechCon 2024</h1>
+        <h1>Contact Us</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Landing Page</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="register.html">Register</a></li>
-                <li><a href="#">Contact us</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        
+        <section>
+            <h2>General Contact Information</h2>
+            
+            <p>
+                <strong>Email:</strong> 
+                <a href="mailto:email@example.com">email@example.com</a>
+            </p>
+
+            <h3>Connect with Us on Social Media</h3>
+            <ul>
+                <li>
+                    <a href="https://twitter.com/techcon" target="_blank">Twitter/X (Icon)</a>
+                </li>
+                <li>
+                    <a href="https://facebook.com/techcon" target="_blank">Facebook (Icon)</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/company/techcon" target="_blank">LinkedIn (Icon)</a>
+                </li>
+            </ul>
+            <p><em>(In a real application, "(Icon)" would be replaced with an image or a font icon.)</em></p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Conference Venue Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.210630650965!2d144.9630578!3d-37.8173516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b322f25497%3A0x8898b3c99026210!2sMelbourne%20Convention%20and%20Exhibition%20Centre!5e0!3m2!1sen!2sau!4v1609459200000!5m2!1sen!2sau" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Conference Venue Location Map">
+                </iframe>
+            </div>
+            <p>Location shown is a placeholder for the Melbourne Convention and Exhibition Centre.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Send Us a Message</h2>
+            <form action="/submit-contact" method="POST">
+                
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechCon. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
